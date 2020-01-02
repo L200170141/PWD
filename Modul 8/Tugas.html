@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>
+            Tugas Modul 9
+        </title>
+        <script>
+            var nilai;
+            function cek(){
+                nilai = document.getElementById("myinput").value;
+                if(0<=nilai && nilai<=20){
+                    document.getElementById("rf").innerHTML="E";
+                }
+                else if(21<=nilai && nilai<=40){
+                    document.getElementById("rf").innerHTML="D";
+                }
+                else if(41<=nilai && nilai<=60){
+                    document.getElementById("rf").innerHTML="C";
+                }
+                else if(61<=nilai && nilai<=80){
+                    document.getElementById("rf").innerHTML="B";
+                }
+                else if(81<=nilai && nilai<=100){
+                    document.getElementById("rf").innerHTML="A";
+                }else {
+                    document.getElementById("rf").innerHTML="Angka Harus Antara 1-100";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+            <form name="tugas">
+                Masukkan Nilai: <input type="text " id='myinput' size='15' maxlength='3'></br>
+                <input type='button' onclick="cek()" value='hasil'>       
+            </form>
+            <h3 id="rf"></h3>
+        </center>
+    </body>
+</html>
